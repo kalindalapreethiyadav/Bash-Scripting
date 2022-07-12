@@ -1,2 +1,5 @@
 #!/bin/bash
-echo -e "hello\n WELCOME!"
+
+Only first line will be SHEBANG Notation rest all that starting with # is commet
+
+echo -e "hello\nWELCOME!";
