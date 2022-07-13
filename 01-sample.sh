@@ -12,8 +12,9 @@ echo -e "Hello\nGood\tMorning!"
 #RGY 31-33(FG) 41-43(BG) & BMC 34-36 44-46(BG)
 
 echo -e "\e[31m testing color of Red FG \e[0m"
-echo -e "\e[31m testing color of green FG \e[0m"
-echo -e "\e[31m testing color of yellow FG \e[0m"
-echo -e "\e[31m testing color of blue FG \e[0m"
-echo -e "\e[31m testing color of magenta FG \e[0m"
-echo -e "\e[31m testing color of clay FG \e[0m"
+echo -e "\e[32m testing color of green FG \e[0m"
+echo -e "\e[33m testing color of yellow FG \e[0m"
+echo -e "\e[34m testing color of blue FG \e[0m"
+echo -e "\e[35m testing color of magenta FG \e[0m"
+echo -e "\e[36m testing color of clay FG \e[0m"
+
