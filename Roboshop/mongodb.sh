@@ -1,1 +1,1 @@
-echo "This is my mongodb script"
+cd Ro   
