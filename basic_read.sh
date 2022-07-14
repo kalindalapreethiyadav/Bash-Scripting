@@ -17,3 +17,10 @@ stat()
     {
         echo "Hey I am innner func inside"
     }
+
+    echo "calling sam fuction"
+
+    sam
+    echo "calling stat function"
+
+    stat
