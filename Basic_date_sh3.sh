@@ -2,4 +2,4 @@
 
 echo $date
 Date_cmd=$(date +%F)
-echo $date +%F
+echo "printing teh date $Date_cmd"
