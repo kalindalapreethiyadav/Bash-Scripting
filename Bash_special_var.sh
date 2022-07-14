@@ -1,4 +1,4 @@
-#lets see declaring varaibes at command prompt end
+#lets see passing varaibes at command line end
 
 echo "prining file name is $0" #Basic_special_var.sh
 echo "first varaible argument 1 is $1" #10
@@ -7,3 +7,6 @@ echo "third spec varaible 3 is $3" #30
 echo "fourth spec varaible 4 is $4" #40
 
 #Basic_special_var.sh 10 20 30 40
+
+echo $* #to count no of varibales in the current script use $*
+
