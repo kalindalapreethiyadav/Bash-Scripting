@@ -7,4 +7,4 @@ echo -e "Lets print commands inside echo string $(who|wc -l)\n"
 echo -e "pwd ls of files $(pwd|ls -lrt)\n"
 echo  "$(pwd)"
 
-echo $date
+echo $(date)
