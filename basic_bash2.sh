@@ -16,7 +16,3 @@ rm -rf /data/${data_dir} #if we didn't specificy the "/data/" whole dir will be 
 d = "/Bash-Scripting/"
 
 echo $d "Hello I am in $d"
-cd $d 
-mkdir folder1
-cd folder1
-pwd
