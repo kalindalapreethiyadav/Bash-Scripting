@@ -11,6 +11,7 @@ stat()
         echo -e "$(uptime| awk -F : '{print $2F}')"
         sam
         echo "I am main func"
+        echo "$(uptime)"
     }
 
     sam()
