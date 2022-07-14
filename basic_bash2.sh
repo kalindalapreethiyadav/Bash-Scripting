@@ -13,6 +13,6 @@ if we are not delcaring the variable for example
 
 rm -rf /data/${data_dir} #if we didn't specificy the "/data/" whole dir will be deleted.
 
-d = "/Bash-Scripting/"
-
-echo $d "Hello I am in $d"
+#${b} & $b both are same
+${b}
+e = "/Bash-Scripting"
