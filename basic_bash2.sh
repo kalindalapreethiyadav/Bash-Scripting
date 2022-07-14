@@ -15,4 +15,4 @@ echo $c
 
 echo $c "Hello I am in $c path"
 
-echo $d
+echo "value of d is $d" #d value not declaring but giing in run time as "export d=100"
