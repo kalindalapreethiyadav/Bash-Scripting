@@ -4,6 +4,8 @@
 
 a=10 # 10 ia also string
 b=abc 
+c=/path/basic/
 
 echo $a 
 echo $b
+echo $c
