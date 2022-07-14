@@ -22,8 +22,8 @@ stat()
 
     echo "calling sam fuction"
     sam
-    echo :
+    echo -e "\n"
     echo "calling stat function"
-    echo :
+    echo -e "\n"
     stat
     echo "completed succesfully"
