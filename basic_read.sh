@@ -8,7 +8,7 @@ stat()
     {
         echo -e "\e[32;41m todays data is $(date +%F) \e[0m"
         echo -e "present no of users logined today $(date +%F) is : $(who|wc) or $(w)\n" 
-        echo "$(uptime| awk -F : {print $2F})"
+        echo "$(uptime| awk -F : {print $(2F)})"
         sam
         echo "I am main func"
     }
