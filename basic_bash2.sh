@@ -11,10 +11,11 @@ echo $c
 
 if we are not delcaring the variable for example
 
-rm -rf /data_path/$data_file_path #if we didn't specificy the data_file_path entire data in dat_path will be deleted.
+rm -rf /data/${data_dir} #if we didn't specificy the "/data/" whole dir will be deleted.
 
 d = "/Bash-Scripting/"
-echo $d
+
+echo $d "Hello I am in $d"
 cd $d 
 mkdir folder1
 cd folder1
