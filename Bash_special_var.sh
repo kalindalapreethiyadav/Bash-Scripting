@@ -8,6 +8,6 @@ echo "fourth spec varaible 4 is $4" #40
 
 #Basic_special_var.sh 10 20 30 40
 
-echo $* #to show all the varibales in the current script use $*
-
+echo $*  #to show all the varibales in the current script use $*
+echo $@ # #@ is also same equal $* --both prints the variables details
 echo $# #use $# to count no of varibles in current script
