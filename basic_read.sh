@@ -21,8 +21,9 @@ stat()
     }
 
     echo "calling sam fuction"
-
     sam
+    echo:
     echo "calling stat function"
-
+    echo:
     stat
+    echo "completed succesfully"
