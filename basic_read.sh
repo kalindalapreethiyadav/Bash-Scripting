@@ -20,10 +20,8 @@ stat()
         echo "Hey I am innner func inside"
     }
 
-    echo "calling sam fuction"
+    echo -e "calling sam fuction\n"
     sam
-    echo -e "\n"
-    echo "calling stat function"
-    echo -e "\n"
+    echo -e "calling stat function\n"
     stat
-    echo "completed succesfully"
+    echo -e "completed succesfully\n"
