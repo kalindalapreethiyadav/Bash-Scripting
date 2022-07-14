@@ -27,4 +27,3 @@ echo -e "\e[34;43m testing color of blue FG \e[0m"
 echo -e "\e[35;42m testing color of magenta FG \e[0m"
 echo -e "\e[36;41m testing color of clay FG \e[0m"
 
-
