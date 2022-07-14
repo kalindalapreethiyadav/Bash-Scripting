@@ -1,6 +1,6 @@
 #!/bin/bash/
 
-echo $date
-Date_cmd=$(date +%F)
-echo -e "($date +%F)"
+Date_cmd=$(date +%F)"
 echo "printing teh date $Date_cmd"
+who|wc -l
+ls |wc -l
