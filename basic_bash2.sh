@@ -14,5 +14,5 @@ echo $c
 #${b} & $b both are same
 
 echo $c "Hello I am in $c path"
-
 echo "value of d is $d" #d value not declaring but giing in run time as "export d=100"
+
