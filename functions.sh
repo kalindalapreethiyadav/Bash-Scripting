@@ -25,6 +25,8 @@ echo "stop else goes"
 fi
 comment
 
+Action=$1
+
 if [ "$(Action)" = "start" ]; then
     echo "stopping the statmts"
 elif [ "$(Action)" = "stop"]; then
