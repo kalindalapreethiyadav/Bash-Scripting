@@ -31,7 +31,7 @@ if [ "$Actions" = "start" ] ; then
     echo "starting the statmts"
 
 elif [ "$Actions" = "stop" ] ; then
-    echo "stop else goes"
+    echo "stop goes"
 
 elif [ "$Actions" = "restart" ] ; then
     echo "restart"
