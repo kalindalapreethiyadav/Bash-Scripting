@@ -24,7 +24,8 @@ else
 echo "stop else goes"
 fi
 comment
-if["$Action" = "start"] then
+
+if ["$Action" = "start"] then
     echo "stopping the statmts"
 elif ["$Action" = "stop"] then
     echo "reboot else goes"
