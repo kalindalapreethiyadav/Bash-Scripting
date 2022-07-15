@@ -37,10 +37,10 @@ stat()
    pwd > ./log.txt
    pwd >> ./log.txt
 
-   wc -ls &>> both.txt # what every the log either success or failure it stores in file.
-   wc -ls 2>> both.txt  #to store errors in the command output
-   ls -lrt|wc -l 1>> ./log.txt
-   ls -lrt|wc -l 0>> ./log.txt
+   echo "both testing $(wc -ls)" &>> both.txt # what every the log either success or failure it stores in file.
+   echo "error testing $(wc -ls)" 2>> both.txt  #to store errors in the command output
+   echo "$(ls -lrt|wc -l) testing error 1 for"  1>> ./log.txt
+   echo "$(ls -lrt|wc -l) testing error 0 for" ls -lrt|wc -l 0>> ./log.txt
 
 #standard input "<" all the input present in the file will be read/injected to mysql
 #example : mysql < ./file.sql
