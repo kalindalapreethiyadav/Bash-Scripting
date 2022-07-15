@@ -45,7 +45,7 @@ stat()
 #standard input "<" all the input present in the file will be read/injected to mysql
 #example : mysql < ./file.sql
  # "0" is for succesful exuction of the command. exit 0 --is scussfull  #1--255 range error status code ex: exit 1 --error
-$? #status of the last command is succefully status code is 0 if error then status code 1
+echo $? #status of the last command is succefully status code is 0 if error then status code 1
 
 
 
