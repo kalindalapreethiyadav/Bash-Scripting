@@ -13,7 +13,7 @@ stat()
         sam
         echo "I am main func"
         echo "$(uptime)"
-        echo -e "load avg for 1 minute : $(load_avg)"
+        echo -e "load avg for 1 minute : $(Load_avg)"
     }
 
     sam()
