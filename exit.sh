@@ -26,3 +26,26 @@ Action=$1
         exit 1
         ;;
 esac
+
+#Formate of cae in bash
+
+case $2 in
+
+  PATTERN_1)
+    echo "STATEMENTS 1 in pattern"
+    ;;
+
+  PATTERN_2)
+    echo "STATEMENTS 2 in pattern"
+    ;;
+
+  PATTERN_N)
+    echo "STATEMENTS N in pattern"
+    ;;
+
+  *)
+    echo "STATEMENTS * in pattern"
+    ;;
+esac
+
+
