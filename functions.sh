@@ -1,38 +1,22 @@
 #!/bin/bash/
+Actions=$1
 #operators on numbers
 # -ne -eq -gt -lt -le
 
-#conditions
-<<comment
-1)if
-2)else if
-3)elif 
 
 
-Action=$1
-
-#if statements
-
-if["$Action" = "start"]; then
-    echo "starting the statmts"
-fi
 
 
-if["$Action" = "start"]; then
-    echo "starting the statmts"
-else
-echo "stop else goes"
-fi
-comment
-
-Action=$1
-
-if [ "$(Action)" = "start" ]; then
+if [ "$Actions" = "start" ] ; then
     echo "stopping the statmts"
-elif [ "$(Action)" = "stop"]; then
+
+elif [ "$Actions" = "stop" ] ; then
     echo "reboot else goes"
-elif [ "$(Action)" = "restart"]; then
+
+elif [ "$Actions" = "restart" ] ; then
     echo "restart"
+
 else
     echo "No action"
+    exit 8
 fi
