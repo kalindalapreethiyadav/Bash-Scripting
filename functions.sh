@@ -4,7 +4,7 @@ Actions=$1
 # -ne -eq -gt -lt -le
 
 if [ "$Actions" = "start" ] ; then
-    echo "stopping the statmts"
+    echo "starting the statmts"
 
 elif [ "$Actions" = "stop" ] ; then
     echo "stop else goes"
