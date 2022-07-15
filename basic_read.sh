@@ -15,7 +15,7 @@ stat()
         echo -e "I am main func\n"
         sleep 2
         echo "$(uptime)"
-        echo "$LOADAVG"
+        echo "load avg for 1 minutes : $LOADAVG"
     }
 
     sam()
