@@ -7,7 +7,7 @@
 1)if
 2)else if
 3)elif 
-comment
+
 
 Action=$1
 
@@ -23,12 +23,12 @@ if["$Action" = "start"]; then
 else
 echo "stop else goes"
 fi
-
+comment
 if["$Action" = "start"]; then
     echo "stopping the statmts"
-elif ["$Action" = "stop"]
+elif ["$Action" = "stop"]; then
     echo "reboot else goes"
-elif ["$Action" = "restart"]
+elif ["$Action" = "restart"]; then
     echo "restart"
 else
     echo "No action"
