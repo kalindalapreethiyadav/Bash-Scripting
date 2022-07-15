@@ -1,6 +1,6 @@
 #!/bin/bash
 LOADAVG="$(uptime|awk -F , '{print $3F}'|awk -F : '{print $NF}')"
-source common.sh
+source ./common.sh
 
 read -p "reading value from user :" Name
 echo -e "printing the value that read : $Name"
