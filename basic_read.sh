@@ -1,8 +1,9 @@
 #!/bin/bash
+LOADAVG="$(uptime|awk -F , '{print $3F}'|awk -F : '{print $NF}')"
+source common.sh
 
 read -p "reading value from user :" Name
 echo -e "printing the value that read : $Name"
-LOADAVG="$(uptime|awk -F , '{print $3F}'|awk -F : '{print $NF}')"
 
 stat()
     {
@@ -27,4 +28,7 @@ stat()
     sam
     echo -e "calling stat function\n"
     stat
+
+    echo "lets call now func inside  common.sh script"
+    common_func
     echo -e "completed succesfully\n"
