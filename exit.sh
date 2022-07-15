@@ -29,7 +29,7 @@ esac
 
 #Formate of cae in bash
 
-case $2 in
+case $1 in
 
   PATTERN_1)
     echo "STATEMENTS 1 in pattern"
