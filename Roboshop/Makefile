@@ -1,10 +1,10 @@
 
 catalogue :
-	sh catalogue.sh
+	sh ./catalogue.sh
 
 frontend :
-	sh frontend.sh
+	sh ./frontend.sh
 
 mongodb :
-	sh mongodb.sh
+	sh ./mongodb.sh
 
