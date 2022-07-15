@@ -2,5 +2,5 @@
 
 #Exit code 0 to 255
 echo "Hello"
-exit 0
+exit 1
 echo "Hi"
