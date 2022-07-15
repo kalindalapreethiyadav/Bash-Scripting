@@ -13,12 +13,12 @@ echo "Hello"
 
  case $1 in 
     start)
-        echo "starting the start option"
+        echo "starting the start option";
         exit 0;
-    stop)
-        echo "starting the stop option"
+    stoping
+        echo "starting the stop option";
         exit 0;
     other)
-        echo "starting the other * option"
+        echo "starting the other * option";
         exit 1;
 esac
