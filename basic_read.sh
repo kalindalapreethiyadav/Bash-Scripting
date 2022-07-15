@@ -32,3 +32,22 @@ stat()
     echo "lets call now func inside  common.sh script"
     common_func
     echo -e "completed succesfully\n"
+
+    #standard out ">" used for getting std output ">>" instand of overwrite it append the log file
+   pwd | ls -lrt > ./log.txt
+   pwd |ls -lrt >> ./log.txt
+
+   pwd|ls -lrt &>> both.txt # what every the log either success or failure it stores in file.
+   pwd|ls -lrt 2>> both.txt  #to store errors in the command output
+   ls -lrt|wc -l 1>> ./log.txt
+   ls -lrt|wc -l 0>> ./log.txt
+
+#standard input "<" all the input present in the file will be read/injected to mysql
+#example : mysql < ./file.sql
+
+$0 #is for succesful exuction of the command. exit 0 --is scussfull  #1--255 range error status code ex: exit 1 --error
+$? #status of the last command is succefully status code is 0 if error then status code 1
+
+
+
+
