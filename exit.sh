@@ -5,8 +5,20 @@ echo "Hello"
 # Example we use exit 0(succesfull) or exit 1-255 code(error)
 #in specfic func or anywhere in code we specify if u want to exit so that 
 #we can identify where the error is with the code error 
-exit 0 # for  scussfull excution $? prints 0
-exit 1 # we can use from 1 to 255 code number so that incidates error $? prints 1 as error
+#exit 0 # for  scussfull excution $? prints 0
+#exit 1 # we can use from 1 to 255 code number so that incidates error $? prints 1 as error
+ 
 
-$?
-echo "Hi"
+ #lets see an example below how it works
+
+ case $1 in 
+    start)
+        echo "starting the start option"
+        exit 0;
+    stop)
+        echo "starting the stop option"
+        exit 0;
+    other)
+        echo "starting the other * option"
+        exit 1;
+esac
