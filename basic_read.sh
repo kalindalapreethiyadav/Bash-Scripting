@@ -34,13 +34,13 @@ stat()
     echo -e "completed succesfully\n"
 
     #standard out ">" used for getting std output ">>" instand of overwrite it append the log file
-   pwd | ls -lrt > ./log.txt
-   pwd |ls -lrt >> ./log.txt
+   pwd > ./log.txt
+   pwd >> ./log.txt
 
    pwd|ls -lrt &>> both.txt # what every the log either success or failure it stores in file.
    pwd|ls -lrt 2>> both.txt  #to store errors in the command output
-   ls -lrt|wc -l 1>> ./log.txt
-   ls -lrt|wc -l 0>> ./log.txt
+   ls -lrt|wc -ls 1>> ./log.txt
+   ls -lrt|wc -ls 0>> ./log.txt
 
 #standard input "<" all the input present in the file will be read/injected to mysql
 #example : mysql < ./file.sql
