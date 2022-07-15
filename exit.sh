@@ -11,14 +11,18 @@ echo "Hello"
 
  #lets see an example below how it works
 
- case $1 in 
+Action=$1
+ case $Action in 
     start)
-        echo "starting the start option";
-        exit 0;
-    stoping
-        echo "starting the stop option";
-        exit 0;
+        echo "starting the start option"
+        exit 0
+        ;;
+    stoping)
+        echo "starting the stop option"
+        exit 0
+        ;;
     other)
-        echo "starting the other * option";
-        exit 1;
+        echo "starting the other * option"
+        exit 1
+        ;;
 esac
