@@ -2,7 +2,7 @@
 
 read -p "reading value from user :" Name
 echo -e "printing the value that read : $Name"
-Load_avg="$(uptime|awk -F , '{print $3F}'|awk -F : '{print $NF}')"
+lod_avg="$(uptime|awk -F , '{print $3F}'|awk -F : '{print $NF}')"
 
 stat()
     {
@@ -13,7 +13,7 @@ stat()
         sam
         echo "I am main func"
         echo "$(uptime)"
-        echo -e "load avg for 1 minute : $(Load_avg)"
+        echo -e "load avg for 1 minute : $(lod_avg)"
     }
 
     sam()
