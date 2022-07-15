@@ -35,12 +35,12 @@ stat()
 
     #standard out ">" used for getting std output ">>" instand of overwrite it append the log file
    pwd > ./log.txt
-   pwd >> ./log.txt
+   pwd >> ./log1.txt
 
-   echo "both testing $(wc -ls)" &>> both.txt # what every the log either success or failure it stores in file.
-   echo "error testing $(wc -ls)" 2>> both.txt  #to store errors in the command output
-   echo "$(ls -lrt|wc -l) testing error 1 for"  1>> ./log.txt
-   echo "$(ls -lrt|wc -l) testing error 0 for" ls -lrt|wc -l 0>> ./log.txt
+   echo "both testing $(wc -l)" &>> both.txt # what every the log either success or failure it stores in file.
+   echo "error testing $(wc -l)" 2>> both.txt  #to store errors in the command output
+   echo "$(ls -lrt|wc -ls) testing error 1 for"  2>> ./log.txt
+   echo "$(ls -lrt) testing error 0 for" 1>> ./log.txt
 
 #standard input "<" all the input present in the file will be read/injected to mysql
 #example : mysql < ./file.sql
