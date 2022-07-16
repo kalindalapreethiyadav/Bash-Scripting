@@ -7,6 +7,7 @@
 sam()
     {
         echo "before return"
+        #only from fun it exit
         return
         echo "AFter return"
     }
@@ -14,6 +15,7 @@ sam()
 sam1()
     {
         echo "before exit"
+        #entire script will exit now
         exit 0
         echo "after exit"
     }
