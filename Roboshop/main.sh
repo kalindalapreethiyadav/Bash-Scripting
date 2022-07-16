@@ -1,3 +1,4 @@
 #!/bin/bash/
 
-sh catalogue.sh
+#we excute like sh main.sh roboshop
+sh components/$1.sh
