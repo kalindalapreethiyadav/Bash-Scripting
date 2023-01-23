@@ -23,7 +23,7 @@ PRIVATE_IP=$(aws ec2 run-instances --security-group-ids $SGID --image-id $AMI_ID
 
 # Changing the IP Address and DNS Name as per the component
 sed -e "s/IPADDRESS/${PRIVATE_IP}/" -e "s/COMPONENT/${COMPONENT}-${ENV}/" route53.json > record.json
-aws route53 change-resource-record-sets --hosted-zone-id Z10449332B7O19X92W88T --change-batch=file://record.json | jq 
+aws route53 change-resource-record-sets --hosted-zone-id Z10449332B7O19X92W88T \ --change-batch file://record.json | jq 
 
 }
 
