@@ -13,8 +13,8 @@ fi
 COMPONENT=$1
 ENV=$2
 SGID="sg-052b6aa44446ef0b4"
-AMI_ID="ami-00ff427d936335825"
-# AMI_ID=$(aws ec2 describe-images  --filters "Name=name,Values=DevOps-LabImage-CentOS7" | jq '.Images[].ImageId' | sed -e 's/"//g')
+AMI_ID="ami-09c044499f38c1068"
+# AMI_ID=$(aws ec2 describe-images  --filters "Name=name,Values=CloudDevOps-LabImage-CentOS7" | jq '.Images[].ImageId' | sed -e 's/"//g')
 echo $AMI_ID 
 
 create_server() {
@@ -23,7 +23,7 @@ create_server() {
 
     # # Changing the IP Address and DNS Name as per the component
     sed -e "s/IPADDRESS/${PRIVATE_IP}/" -e "s/COMPONENT/${COMPONENT}-${ENV}/" route53.json > /tmp/record.json 
-    aws route53 change-resource-record-sets --hosted-zone-id Z10449332B7O19X92W88T --change-batch file://tmp/record.json | jq 
+    aws route53 change-resource-record-sets --hosted-zone-id Z01343381V1UMF97WRJWR --change-batch file:///tmp/record.json | jq 
 }
 
 if [ "$1" == "all" ]; then 
@@ -34,4 +34,3 @@ if [ "$1" == "all" ]; then
 else 
     create_server # Calling a function 
 fi
-
