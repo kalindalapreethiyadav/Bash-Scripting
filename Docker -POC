@@ -1,0 +1,604 @@
+54.234.254.134 | 172.31.23.52 | t2.micro | null
+[ root@ip-172-31-23-52 ~ ]# aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin 683207969965.dkr.ecr.us-east-1.amazonaws.com
+WARNING! Your password will be stored unencrypted in /root/.docker/config.json.
+Configure a credential helper to remove this warning. See
+https://docs.docker.com/engine/reference/commandline/login/#credentials-store
+
+Login Succeeded
+
+54.234.254.134 | 172.31.23.52 | t2.micro | null
+[ root@ip-172-31-23-52 ~ ]# cat /root/.docker/config.json.
+cat: /root/.docker/config.json.: No such file or directory
+
+54.234.254.134 | 172.31.23.52 | t2.micro | null
+[ root@ip-172-31-23-52 ~ ]# sudo cat /root/.docker/config.json
+{
+        "auths": {
+                "683207969965.dkr.ecr.us-east-1.amazonaws.com": {
+                        "auth": "QVdTOmV5SndZWGxzYjJGa0lqb2lVVWxVWVVVdk9HTkNObU0wUjA4MFJucFlkWFozWmxKRFozcE9iekk1ZEcxTk56VnNVMDgwZVVWMk1sTllRVmxIUTFKSGRFazJhWEUxYUVoSlVqVXplWEpVV0dkRFVHVndjM0YwVm1NeGMyZFFlbFJCTmxaaE5IQk1VMnhqYkVJMFNIa3Zabk5YZDFGUFFqSjZOMFIyT1hGYVVVeE5TVWRYWlZkd0x6aG5LMnBIWVZCS01XVm1NMXAxTW5sS2VITkxabHBQVW1aR2NrZEVRazVvWTFFeFNteHdhMGh2WkV0a1lXSnpXbTAyUkhodVdWazRVM3BPVjJwcWMxSTNZM1EwTjBOdGRIWjNVMVpLU3k5aloyZDJlRzFXU1RkcFEwRmxjRlZzYUc1S2JqQlhXVzhyZERGbFJXTnBlbUY2VFdaVUwzSXhaM3BwVTBscU5uZGhWVTB2ZWxwMll6STBNa0ZEWldORlVubEhRVTVqU21SUGExVmtOMjUzUVhCaWREWmtaMFJYZUVwSk1HdFFhMlo2Y21neVpIbE9XU3RxYzBORU5sRkZkR3MxUkZNNVpHWmxjMkZXTVZWM1pVNUNNRWwzYUVsdmVuQk9hak5zTkc0MGIzY3ZjRFF4U2tSaFIwb3dPR3M0UldaTmMyYzBURlU1WWpWelpXUnNPVXh2ZDJGS2FFWm9hMWQxVjNOR2FWRlpOalExVlVoNlEyUnZUREpST0ZCTVlTdEZjRzR3ZGt0NloyMHJlVVpsU0dkdmNVUjJSR3RPU3pobWJFSmxUV28yYVVzM1dWaERabFZhY0VWT01VZzRPREU0VmxJeFIwOW9OU3RIUlZsVFV6TlZja0l5V21ORFVrUk9jeXMyU0RCQ1RqaHZXRmMyUTJrdmIxTlVOV014WjA5bmEyWlZWVGh2YkVaMlNFNDRXRzVMUVM5SVJGUTFUalY2WVhSWFFVUXpXSEpsVkRoTGVYaHBRazVTU2tOcVNrdFJhbGhtVG5FMlRHdEtTR3Q1WkZaQ1NEZFlOVmxOWjNSS2RtSlRZblY1ZDFKMVoycHdWRTF4ZVVaSVFVUkZXRXBpUkZFMFRXdHRTR1F3VVRVd2NXRXhialJ5Vm1oRVdsaEtlVFp4UVdwbU9Tc3lla0oyTkdjelF6Qm1TazFDTTJKMWQwMUxSaXM1U2xkTmMyRktiR0ZGYTJOWmIxcDRNMlZaTTNFcldqVk9SbkYwVms5eGQyZHJTM1k0YjJsT1oweG1kRXRVUlZkT1luSlNha0pqYkVwRVUxVkRNazgwVjFJclRDOWlURWxrYm5OSE5IVkhSbXByY0V0eWVWSm5aMjhyWld0bU5GSldhV1ZsVG0xQmRESkxaaTg1UkVGck0zWndOSGh2TkVWek1EVkZlVFU1VFdwVlJtTkJkakl5U1ZwM1JrMXJlVnBIYkZKVWMxWmpOMkpPYzNKQ2JqbEZTVFoyWWtOc1QwTjFSVmh5Y0hCcWVYaHNjeXRsV2l0S04zTmpTRkp0U1ZNeVVETnhkRFF4VjIwd1VteEphVGRHVVVST01rVlRORXRHVlZCcFREWTJjU3RETkdJNVkxa3JUMmQ2UTBzd2IxaGhjRFIxY0ZaQ1oyRlNkV3c0UjJscFlrRlhPRlpTTmxOeFRrTk1VV3g1Y0ZwdVVHUkdXWFJ3WVRObFZsQkxVRnBMUWtsaWNraFRaMGR1ZUhVelZuQmxSbWR1YVZoclQxSkVjMFZyTWpGb1lYSnliRGQ0Vm1kV1RFSkRTMnBXZVV4cE4zbHhUaTlzWWtjeVVITmhTR1ZzUkdsd0syUTBUVVJrZG5FeWExQnJORWhXWVRkSlZVdzRLMnRWVHlzNE16aERVV1pOY0U1S2RscEJZM1o0ZGpaRWFYaG9OV014ZEZobldqVmpaMWc0WVZsNVJUaDFVMmhYY1N0ME1HUm1iV0kzYmpZeFNtbHJUMHhJYUdOaVdGVmhURFZXTUdaSE9IWkpiVkZDWmpKWGVtcHNNR01yY0N0RFVrMUlLMjE1ZERkcVdEWmpaM0JGVkNzMFRXdGhNVUZJU0RoTFdtSTNVVmRVT1Vad2NrbG1NalZQT0N0cE1HVjZZbTFxWWxVMU5EZHNSakowS3psaWVVeDRWRGhXVUVOaWVtbGFTWFptUzI0clpWWm1XSFJwVWpSU1dGVlZhVFJ3SzFBM1lrUndNVmR1U1cxd1NrNDNhM05YTkM5VmVGWlFkbUVyWVV0UVZXNTNlbGhSV1hVdllteHJhMG8wWmtWTk5XUkJXblEzT1RodVFWWm5Wa2RYU0ZCRGRrMVVZVFJRVlhKUk4zaEhVSEpsYkZoUlRVOUdWbkJGY2l0M1JsRmxLMGQzYXpCU2NUQTVjR2RGY0RORFQzTk1OVmM0V25JeE1EZFhPVmt2WmpoQ1pXTlVSbkJxWVdKb1RHUTNNVzlUTmxsdVJHWlNSbGhPVURCak1WWXdla2RTTVhwaGRrOTFLellyU1ZCQ2RFY3lTekZSYVdKNVpYSlZaMFpYWWtkbmJISkNMMnBRTmpsRFRURlJVbVYzV2paT1FpOVRTMUpGWTJoVVFsQmhhbWQwTWtRclRqSnVVa05PZEdjck0wSkpZMkZFTDFGSlNEWmFZMEZoWkRkNWNIRm1Na1pVUkRjclVXNU1VME12TDBneU0yVkliMFJEVERVMFF6QmlWRWxRVkVNNVMwZEVWVFJ1UlU0dmMxbG5WRmsyUjB0NFNFdGpTMWxCUkRkTVNHZFdURFYyVm5sbFpqTm5jVVpCUjAxRU9YTnFTMVZLUWpacGF5OVpibEpLVVVkelZ6WkRjVGMzVTIxc05FazBUMlpXTVZKVFJuWldXVVowZUcxV1ZGQm9WSGd2UmpkSGVESjZVM1pEVGxSclZXaE1WMVpLYjNveWRuQm1TR015ZGt4b1QwSm9NVmhEWm1GUlQyTmFjVVZQTlVRek5XbHBaemROWlhOMmRXSTJMMGgzYUcxemJHZHJWRTloTVZZMVFYZFhXbmM0U3pBMk5FTlpXREp6ZDI5RmQwbFJTVGxrTWpsc2FqZHlabVpwWVhKV2JUZHhZbVoyZW5sS2FEa3paVzlTWVd0T09FUm9RbU5rVlVOeVJHUlVLMFpITUV0dVQwTkJZa1ZaTDNGWGRrZ2lMQ0prWVhSaGEyVjVJam9pUVZGRlFrRklhSGR0TUZsaFNWTktaVkowU20wMWJqRkhOblZ4WldWcldIVnZXRmhRWlRWVlJtTmxPVkp4T0M4eE5IZEJRVUZJTkhkbVFWbEtTMjlhU1doMlkwNUJVV05IYjBjNGQySlJTVUpCUkVKdlFtZHJjV2hyYVVjNWR6QkNRbmRGZDBobldVcFpTVnBKUVZkVlJFSkJSWFZOUWtWRlJFTlJVbWRCWVhGamFWWnhjMGNyUTB4blNVSkZTVUUzVUc5aFMycHhZa28wYjNOTWRWVmpWRkpWYWpOSFIzSkZjMWwyU214SkszWXJSMlJZVWxwelZuRm9NMDlsTWpaM1QzRlBNSE5WUkZwcWRsZDRPWEV2TlVaYVdETXJjWGwxVFZwWVUzZEZZejBpTENKMlpYSnphVzl1SWpvaU1pSXNJblI1Y0dVaU9pSkVRVlJCWDB0RldTSXNJbVY0Y0dseVlYUnBiMjRpT2pFMk56UTJNVGd6T1RSOQ=="
+                },
+                "https://index.docker.io/v1/": {
+                        "auth": "cHJlZXRoaXlhZGF2OktwcmVldGhpNTc5Kio="
+                }
+        }
+}
+54.234.254.134 | 172.31.23.52 | t2.micro | null
+[ root@ip-172-31-23-52 ~ ]# docker ps
+CONTAINER ID   IMAGE                                           COMMAND                  CREATED       STATUS       PORTS                                                 NAMES
+f0c78c5e172b   preethiyadav/hello-world-nodejs:0.0.2.Release   "docker-entrypoint.s…"   2 hours ago   Up 2 hours   5000/tcp, 0.0.0.0:5070->5002/tcp, :::5070->5002/tcp   brave_ride
+1f0eaa529df8   preethiyadav/hello-world-java:0.0.2.Release     "sh -c 'java -jar /h…"   2 hours ago   Up 2 hours   5000/tcp, 0.0.0.0:5060->5001/tcp, :::5060->5001/tcp   gallant_chandrasekhar
+2f945888789e   preethiyadav/hello-world-python:0.0.2.Release   "/bin/sh -c 'python …"   2 hours ago   Up 2 hours   0.0.0.0:5050->5000/tcp, :::5050->5000/tcp             stupefied_faraday
+
+54.234.254.134 | 172.31.23.52 | t2.micro | null
+[ root@ip-172-31-23-52 ~ ]# docker images
+REPOSITORY                        TAG             IMAGE ID       CREATED         SIZE
+preethiyadav/hello-world-python   0.0.2.Release   3d40169de6bc   5 weeks ago     91.1MB
+preethiyadav/hello-world-java     0.0.2.Release   b2969c2b5cc6   5 weeks ago     122MB
+preethiyadav/hello-world-nodejs   0.0.2.Release   d52aa3206488   5 weeks ago     106MB
+hello-world                       latest          feb5d9fea6a5   16 months ago   13.3kB
+
+54.234.254.134 | 172.31.23.52 | t2.micro | null
+[ root@ip-172-31-23-52 ~ ]# docker tag preethiyadav/hello-world-python:0.0.2.Release  683207969965.dkr.ecr.us-east-1.amazonaws.com/hello-world-nodejs:latest
+
+54.234.254.134 | 172.31.23.52 | t2.micro | null
+[ root@ip-172-31-23-52 ~ ]# docker images
+REPOSITORY                                                        TAG             IMAGE ID       CREATED         SIZE
+683207969965.dkr.ecr.us-east-1.amazonaws.com/hello-world-nodejs   latest          3d40169de6bc   5 weeks ago     91.1MB
+preethiyadav/hello-world-python                                   0.0.2.Release   3d40169de6bc   5 weeks ago     91.1MB
+preethiyadav/hello-world-java                                     0.0.2.Release   b2969c2b5cc6   5 weeks ago     122MB
+preethiyadav/hello-world-nodejs                                   0.0.2.Release   d52aa3206488   5 weeks ago     106MB
+hello-world                                                       latest          feb5d9fea6a5   16 months ago   13.3kB
+
+54.234.254.134 | 172.31.23.52 | t2.micro | null
+[ root@ip-172-31-23-52 ~ ]# docker push  683207969965.dkr.ecr.us-east-1.amazonaws.com/hello-world-nodejs:latest
+The push refers to repository [683207969965.dkr.ecr.us-east-1.amazonaws.com/hello-world-nodejs]
+2348735b9d76: Pushed
+5c1000e29836: Pushed
+b8b60cc91ecd: Pushed
+4e633e2489a3: Pushed
+798f2bf6d71c: Pushed
+e1c1f46b85cc: Pushed
+057be770731c: Pushed
+1b3ee35aacca: Pushed
+latest: digest: sha256:735e97357fdd878e6ae3fe6cdbb255634758dc3f8001b15c912cd480f3a97da6 size: 1994
+
+54.234.254.134 | 172.31.23.52 | t2.micro | null
+[ root@ip-172-31-23-52 ~ ]# docker tag preethiyadav/hello-world-java 683207969965.dkr.ecr.us-east-1.amazonaws.com/hello-world-java:0.0.1.Release             Error response from daemon: No such image: preethiyadav/hello-world-java:latest
+
+54.234.254.134 | 172.31.23.52 | t2.micro | null
+[ root@ip-172-31-23-52 ~ ]# docker tag preethiyadav/hello-world-jav:0.0.2.Release 683207969965.dkr.ecr.us-east-1.amazonaws.com/hello-world-java:0.0.1.Release
+Error response from daemon: No such image: preethiyadav/hello-world-jav:0.0.2.Release
+
+54.234.254.134 | 172.31.23.52 | t2.micro | null
+[ root@ip-172-31-23-52 ~ ]# docker tag preethiyadav/hello-world-java:0.0.2.Release 683207969965.dkr.ecr.us-east-1.amazonaws.com/hello-world-java:0.0.1.Release
+
+54.234.254.134 | 172.31.23.52 | t2.micro | null
+[ root@ip-172-31-23-52 ~ ]# docker images
+REPOSITORY                                                        TAG             IMAGE ID       CREATED         SIZE
+683207969965.dkr.ecr.us-east-1.amazonaws.com/hello-world-nodejs   latest          3d40169de6bc   5 weeks ago     91.1MB
+preethiyadav/hello-world-python                                   0.0.2.Release   3d40169de6bc   5 weeks ago     91.1MB
+683207969965.dkr.ecr.us-east-1.amazonaws.com/hello-world-java     0.0.1.Release   b2969c2b5cc6   5 weeks ago     122MB
+preethiyadav/hello-world-java                                     0.0.2.Release   b2969c2b5cc6   5 weeks ago     122MB
+preethiyadav/hello-world-nodejs                                   0.0.2.Release   d52aa3206488   5 weeks ago     106MB
+hello-world                                                       latest          feb5d9fea6a5   16 months ago   13.3kB
+
+54.234.254.134 | 172.31.23.52 | t2.micro | null
+[ root@ip-172-31-23-52 ~ ]# docker tag preethiyadav/hello-world-nodejs 683207969965.dkr.ecr.us-east-1.amazonaws.com/hello-world-nodejs:0.0.1.Release
+Error response from daemon: No such image: preethiyadav/hello-world-nodejs:latest
+
+54.234.254.134 | 172.31.23.52 | t2.micro | null
+[ root@ip-172-31-23-52 ~ ]# docker tag preethiyadav/hello-world-nodejs:0.0.2.Release 683207969965.dkr.ecr.us-east-1.amazonaws.com/hello-world-nodejs:0.0.1.Release
+
+54.234.254.134 | 172.31.23.52 | t2.micro | null
+[ root@ip-172-31-23-52 ~ ]# docker tag preethiyadav/hello-world-python:0.0.2.Release 683207969965.dkr.ecr.us-east-1.amazonaws.com/hello-world-python:0.0.1.Release
+
+54.234.254.134 | 172.31.23.52 | t2.micro | null
+[ root@ip-172-31-23-52 ~ ]# docker images
+REPOSITORY                                                        TAG             IMAGE ID       CREATED         SIZE
+683207969965.dkr.ecr.us-east-1.amazonaws.com/hello-world-nodejs   latest          3d40169de6bc   5 weeks ago     91.1MB
+683207969965.dkr.ecr.us-east-1.amazonaws.com/hello-world-python   0.0.1.Release   3d40169de6bc   5 weeks ago     91.1MB
+preethiyadav/hello-world-python                                   0.0.2.Release   3d40169de6bc   5 weeks ago     91.1MB
+683207969965.dkr.ecr.us-east-1.amazonaws.com/hello-world-java     0.0.1.Release   b2969c2b5cc6   5 weeks ago     122MB
+preethiyadav/hello-world-java                                     0.0.2.Release   b2969c2b5cc6   5 weeks ago     122MB
+683207969965.dkr.ecr.us-east-1.amazonaws.com/hello-world-nodejs   0.0.1.Release   d52aa3206488   5 weeks ago     106MB
+preethiyadav/hello-world-nodejs                                   0.0.2.Release   d52aa3206488   5 weeks ago     106MB
+hello-world                                                       latest          feb5d9fea6a5   16 months ago   13.3kB
+
+54.234.254.134 | 172.31.23.52 | t2.micro | null
+[ root@ip-172-31-23-52 ~ ]# docker login
+Authenticating with existing credentials...
+WARNING! Your password will be stored unencrypted in /root/.docker/config.json.
+Configure a credential helper to remove this warning. See
+https://docs.docker.com/engine/reference/commandline/login/#credentials-store
+
+Login Succeeded
+
+54.234.254.134 | 172.31.23.52 | t2.micro | null
+[ root@ip-172-31-23-52 ~ ]# docker push preethiyadav/hello-world-java:0.0.2.Release
+The push refers to repository [docker.io/preethiyadav/hello-world-java]
+593682e5a482: Layer already exists
+ceaf9e1ebef5: Layer already exists
+9b9b7f3d56a0: Layer already exists
+f1b5933fe4b5: Layer already exists
+0.0.2.Release: digest: sha256:7060adc3ef25254136df3bb321656993ce70706ee061329bfe3f6030ed4a6030 size: 1159
+
+54.234.254.134 | 172.31.23.52 | t2.micro | null
+[ root@ip-172-31-23-52 ~ ]# docker push preethiyadav/hello-world-nodejs:0.0.2.Release
+The push refers to repository [docker.io/preethiyadav/hello-world-nodejs]
+4ffe0818e446: Layer already exists
+3b9184609c31: Layer already exists
+12a7673ba4c7: Layer already exists
+e7ae04d3f37c: Layer already exists
+e29ab5067804: Layer already exists
+ae4ceb8dc557: Layer already exists
+f1b5933fe4b5: Layer already exists
+0.0.2.Release: digest: sha256:57586c17c41e8e6169ecb86d6490c82c0be4e71b679eda05cc24232cca695bec size: 1784
+
+54.234.254.134 | 172.31.23.52 | t2.micro | null
+[ root@ip-172-31-23-52 ~ ]# docker push preethiyadav/hello-world-python:0.0.2.Release
+The push refers to repository [docker.io/preethiyadav/hello-world-python]
+2348735b9d76: Layer already exists
+5c1000e29836: Layer already exists
+b8b60cc91ecd: Layer already exists
+4e633e2489a3: Layer already exists
+798f2bf6d71c: Layer already exists
+e1c1f46b85cc: Layer already exists
+057be770731c: Layer already exists
+1b3ee35aacca: Layer already exists
+0.0.2.Release: digest: sha256:735e97357fdd878e6ae3fe6cdbb255634758dc3f8001b15c912cd480f3a97da6 size: 1994
+
+54.234.254.134 | 172.31.23.52 | t2.micro | null
+[ root@ip-172-31-23-52 ~ ]# docker push 683207969965.dkr.ecr.us-east-1.amazonaws.com/hello-world-java:latest
+The push refers to repository [683207969965.dkr.ecr.us-east-1.amazonaws.com/hello-world-java]
+tag does not exist: 683207969965.dkr.ecr.us-east-1.amazonaws.com/hello-world-java:latest
+
+54.234.254.134 | 172.31.23.52 | t2.micro | null
+[ root@ip-172-31-23-52 ~ ]# aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin 683207969965.dkr.ecr.us-east-1.amazonaws.com
+WARNING! Your password will be stored unencrypted in /root/.docker/config.json.
+Configure a credential helper to remove this warning. See
+https://docs.docker.com/engine/reference/commandline/login/#credentials-store
+
+Login Succeeded
+
+54.234.254.134 | 172.31.23.52 | t2.micro | null
+[ root@ip-172-31-23-52 ~ ]# docker push 683207969965.dkr.ecr.us-east-1.amazonaws.com/hello-world-java:latest                                                 The push refers to repository [683207969965.dkr.ecr.us-east-1.amazonaws.com/hello-world-java]
+tag does not exist: 683207969965.dkr.ecr.us-east-1.amazonaws.com/hello-world-java:latest
+
+54.234.254.134 | 172.31.23.52 | t2.micro | null
+[ root@ip-172-31-23-52 ~ ]# docker push 683207969965.dkr.ecr.us-east-1.amazonaws.com/preethiyadav/hello-world-java:latest
+The push refers to repository [683207969965.dkr.ecr.us-east-1.amazonaws.com/preethiyadav/hello-world-java]
+An image does not exist locally with the tag: 683207969965.dkr.ecr.us-east-1.amazonaws.com/preethiyadav/hello-world-java
+
+54.234.254.134 | 172.31.23.52 | t2.micro | null
+[ root@ip-172-31-23-52 ~ ]# docker images
+REPOSITORY                                                        TAG             IMAGE ID       CREATED         SIZE
+683207969965.dkr.ecr.us-east-1.amazonaws.com/hello-world-nodejs   latest          3d40169de6bc   5 weeks ago     91.1MB
+683207969965.dkr.ecr.us-east-1.amazonaws.com/hello-world-python   0.0.1.Release   3d40169de6bc   5 weeks ago     91.1MB
+preethiyadav/hello-world-python                                   0.0.2.Release   3d40169de6bc   5 weeks ago     91.1MB
+683207969965.dkr.ecr.us-east-1.amazonaws.com/hello-world-java     0.0.1.Release   b2969c2b5cc6   5 weeks ago     122MB
+preethiyadav/hello-world-java                                     0.0.2.Release   b2969c2b5cc6   5 weeks ago     122MB
+683207969965.dkr.ecr.us-east-1.amazonaws.com/hello-world-nodejs   0.0.1.Release   d52aa3206488   5 weeks ago     106MB
+preethiyadav/hello-world-nodejs                                   0.0.2.Release   d52aa3206488   5 weeks ago     106MB
+hello-world                                                       latest          feb5d9fea6a5   16 months ago   13.3kB
+
+54.234.254.134 | 172.31.23.52 | t2.micro | null
+[ root@ip-172-31-23-52 ~ ]# docker tag 683207969965.dkr.ecr.us-east-1.amazonaws.com/hello-world-java 683207969965.dkr.ecr.us-east-1.amazonaws.com/preethiyadav/hello-world-java:0.0.1.Release
+Error response from daemon: No such image: 683207969965.dkr.ecr.us-east-1.amazonaws.com/hello-world-java:latest
+
+54.234.254.134 | 172.31.23.52 | t2.micro | null
+[ root@ip-172-31-23-52 ~ ]# docker tag 683207969965.dkr.ecr.us-east-1.amazonaws.com/hello-world-java:0.0.1.Release 683207969965.dkr.ecr.us-east-1.amazonaws.com/preethiyadav/hello-world-java:0.0.1.Release
+
+54.234.254.134 | 172.31.23.52 | t2.micro | null
+[ root@ip-172-31-23-52 ~ ]# docker tag 683207969965.dkr.ecr.us-east-1.amazonaws.com/hello-world-python:0.0.1.Release 683207969965.dkr.ecr.us-east-1.amazonaws.com/preethiyadav/hello-world-python:0.0.1.Release
+
+54.234.254.134 | 172.31.23.52 | t2.micro | null
+[ root@ip-172-31-23-52 ~ ]# docker push 683207969965.dkr.ecr.us-east-1.amazonaws.com/preethiyadav/hello-world-java:latest
+The push refers to repository [683207969965.dkr.ecr.us-east-1.amazonaws.com/preethiyadav/hello-world-java]
+tag does not exist: 683207969965.dkr.ecr.us-east-1.amazonaws.com/preethiyadav/hello-world-java:latest
+
+54.234.254.134 | 172.31.23.52 | t2.micro | null
+[ root@ip-172-31-23-52 ~ ]# docker push 683207969965.dkr.ecr.us-east-1.amazonaws.com/preethiyadav/hello-world-java:0.0.1.Release
+The push refers to repository [683207969965.dkr.ecr.us-east-1.amazonaws.com/preethiyadav/hello-world-java]
+593682e5a482: Pushed
+ceaf9e1ebef5: Pushed
+9b9b7f3d56a0: Pushed
+f1b5933fe4b5: Pushed
+0.0.1.Release: digest: sha256:7060adc3ef25254136df3bb321656993ce70706ee061329bfe3f6030ed4a6030 size: 1159
+
+54.234.254.134 | 172.31.23.52 | t2.micro | null
+[ root@ip-172-31-23-52 ~ ]# docker push 683207969965.dkr.ecr.us-east-1.amazonaws.com/preethiyadav/hello-world-nodjs:0.0.1.Release
+The push refers to repository [683207969965.dkr.ecr.us-east-1.amazonaws.com/preethiyadav/hello-world-nodjs]
+An image does not exist locally with the tag: 683207969965.dkr.ecr.us-east-1.amazonaws.com/preethiyadav/hello-world-nodjs
+
+54.234.254.134 | 172.31.23.52 | t2.micro | null
+[ root@ip-172-31-23-52 ~ ]# docker push 683207969965.dkr.ecr.us-east-1.amazonaws.com/preethiyadav/hello-world-nodejs:0.0.1.Release
+The push refers to repository [683207969965.dkr.ecr.us-east-1.amazonaws.com/preethiyadav/hello-world-nodejs]
+An image does not exist locally with the tag: 683207969965.dkr.ecr.us-east-1.amazonaws.com/preethiyadav/hello-world-nodejs
+
+54.234.254.134 | 172.31.23.52 | t2.micro | null
+[ root@ip-172-31-23-52 ~ ]# docker push 683207969965.dkr.ecr.us-east-1.amazonaws.com/preethiyadav/hello-world-python:latest
+The push refers to repository [683207969965.dkr.ecr.us-east-1.amazonaws.com/preethiyadav/hello-world-python]
+tag does not exist: 683207969965.dkr.ecr.us-east-1.amazonaws.com/preethiyadav/hello-world-python:latest
+
+54.234.254.134 | 172.31.23.52 | t2.micro | null
+[ root@ip-172-31-23-52 ~ ]# docker push 683207969965.dkr.ecr.us-east-1.amazonaws.com/preethiyadav/hello-world-python:0.0.1.Release
+The push refers to repository [683207969965.dkr.ecr.us-east-1.amazonaws.com/preethiyadav/hello-world-python]
+2348735b9d76: Pushed
+5c1000e29836: Pushed
+b8b60cc91ecd: Pushed
+4e633e2489a3: Pushed
+798f2bf6d71c: Pushed
+e1c1f46b85cc: Pushed
+057be770731c: Pushed
+1b3ee35aacca: Pushed
+0.0.1.Release: digest: sha256:735e97357fdd878e6ae3fe6cdbb255634758dc3f8001b15c912cd480f3a97da6 size: 1994
+
+54.234.254.134 | 172.31.23.52 | t2.micro | null
+[ root@ip-172-31-23-52 ~ ]# df -h
+Filesystem      Size  Used Avail Use% Mounted on
+devtmpfs        470M     0  470M   0% /dev
+tmpfs           495M     0  495M   0% /dev/shm
+tmpfs           495M   14M  482M   3% /run
+tmpfs           495M     0  495M   0% /sys/fs/cgroup
+/dev/xvda1      8.0G  4.0G  4.1G  50% /
+tmpfs            99M     0   99M   0% /run/user/1000
+overlay         8.0G  4.0G  4.1G  50% /var/lib/docker/overlay2/aa10d0a5c0f21b6139734f8e4c9fd767b2f7c82d449a4b159d4e22b33d7a7f18/merged
+overlay         8.0G  4.0G  4.1G  50% /var/lib/docker/overlay2/f1246594c7cdec94a384e17e7120ed759ea476c2e225c39b84de38bd22c7ed36/merged
+overlay         8.0G  4.0G  4.1G  50% /var/lib/docker/overlay2/80a5f6da6ba6ea4946b1c3c3d16abb1f7253a9715d3575bc850cb13644dcc351/merged
+
+54.234.254.134 | 172.31.23.52 | t2.micro | null
+[ root@ip-172-31-23-52 ~ ]# docker df
+docker: 'df' is not a docker command.
+See 'docker --help'
+
+54.234.254.134 | 172.31.23.52 | t2.micro | null
+[ root@ip-172-31-23-52 ~ ]# docker ps
+CONTAINER ID   IMAGE                                           COMMAND                  CREATED       STATUS       PORTS                                                 NAMES
+f0c78c5e172b   preethiyadav/hello-world-nodejs:0.0.2.Release   "docker-entrypoint.s…"   2 hours ago   Up 2 hours   5000/tcp, 0.0.0.0:5070->5002/tcp, :::5070->5002/tcp   brave_ride
+1f0eaa529df8   preethiyadav/hello-world-java:0.0.2.Release     "sh -c 'java -jar /h…"   2 hours ago   Up 2 hours   5000/tcp, 0.0.0.0:5060->5001/tcp, :::5060->5001/tcp   gallant_chandrasekhar
+2f945888789e   preethiyadav/hello-world-python:0.0.2.Release   "/bin/sh -c 'python …"   2 hours ago   Up 2 hours   0.0.0.0:5050->5000/tcp, :::5050->5000/tcp             stupefied_faraday
+
+54.234.254.134 | 172.31.23.52 | t2.micro | null
+[ root@ip-172-31-23-52 ~ ]# docker images
+REPOSITORY                                                                     TAG             IMAGE ID       CREATED         SIZE
+preethiyadav/hello-world-python                                                0.0.2.Release   3d40169de6bc   5 weeks ago     91.1MB
+683207969965.dkr.ecr.us-east-1.amazonaws.com/hello-world-nodejs                latest          3d40169de6bc   5 weeks ago     91.1MB
+683207969965.dkr.ecr.us-east-1.amazonaws.com/hello-world-python                0.0.1.Release   3d40169de6bc   5 weeks ago     91.1MB
+683207969965.dkr.ecr.us-east-1.amazonaws.com/preethiyadav/hello-world-python   0.0.1.Release   3d40169de6bc   5 weeks ago     91.1MB
+683207969965.dkr.ecr.us-east-1.amazonaws.com/hello-world-java                  0.0.1.Release   b2969c2b5cc6   5 weeks ago     122MB
+683207969965.dkr.ecr.us-east-1.amazonaws.com/preethiyadav/hello-world-java     0.0.1.Release   b2969c2b5cc6   5 weeks ago     122MB
+preethiyadav/hello-world-java                                                  0.0.2.Release   b2969c2b5cc6   5 weeks ago     122MB
+683207969965.dkr.ecr.us-east-1.amazonaws.com/hello-world-nodejs                0.0.1.Release   d52aa3206488   5 weeks ago     106MB
+preethiyadav/hello-world-nodejs                                                0.0.2.Release   d52aa3206488   5 weeks ago     106MB
+hello-world                                                                    latest          feb5d9fea6a5   16 months ago   13.3kB
+
+54.234.254.134 | 172.31.23.52 | t2.micro | null
+[ root@ip-172-31-23-52 ~ ]# docker run -d -p 5040:5004 683207969965.dkr.ecr.us-east-1.amazonaws.com/hello-world-python:0.0.1.Release
+f6452e80761e4c7896eb0948f7e2722944d1f4efd8cfeb1142969ace61d87ed0
+
+
+
+54.234.254.134 | 172.31.23.52 | t2.micro | null
+[ root@ip-172-31-23-52 ~ ]#
+
+54.234.254.134 | 172.31.23.52 | t2.micro | null
+[ root@ip-172-31-23-52 ~ ]#
+
+54.234.254.134 | 172.31.23.52 | t2.micro | null
+[ root@ip-172-31-23-52 ~ ]# docker df
+docker: 'df' is not a docker command.
+See 'docker --help'
+
+54.234.254.134 | 172.31.23.52 | t2.micro | null
+[ root@ip-172-31-23-52 ~ ]# df -h
+Filesystem      Size  Used Avail Use% Mounted on
+devtmpfs        470M     0  470M   0% /dev
+tmpfs           495M     0  495M   0% /dev/shm
+tmpfs           495M   14M  482M   3% /run
+tmpfs           495M     0  495M   0% /sys/fs/cgroup
+/dev/xvda1      8.0G  4.0G  4.1G  50% /
+tmpfs            99M     0   99M   0% /run/user/1000
+overlay         8.0G  4.0G  4.1G  50% /var/lib/docker/overlay2/aa10d0a5c0f21b6139734f8e4c9fd767b2f7c82d449a4b159d4e22b33d7a7f18/merged
+overlay         8.0G  4.0G  4.1G  50% /var/lib/docker/overlay2/f1246594c7cdec94a384e17e7120ed759ea476c2e225c39b84de38bd22c7ed36/merged
+overlay         8.0G  4.0G  4.1G  50% /var/lib/docker/overlay2/80a5f6da6ba6ea4946b1c3c3d16abb1f7253a9715d3575bc850cb13644dcc351/merged
+overlay         8.0G  4.0G  4.1G  50% /var/lib/docker/overlay2/77c9f414ddeedc2793cebb7137e54e39e09bb701e74e3e4490c0a64e5738f970/merged
+
+54.234.254.134 | 172.31.23.52 | t2.micro | null
+[ root@ip-172-31-23-52 ~ ]# docker ps
+CONTAINER ID   IMAGE                                                                           COMMAND                  CREATED         STATUS              PORTS                                                 NAMES
+f6452e80761e   683207969965.dkr.ecr.us-east-1.amazonaws.com/hello-world-python:0.0.1.Release   "/bin/sh -c 'python …"   3 minutes ago   Up About a minute   5000/tcp, 0.0.0.0:5040->5004/tcp, :::5040->5004/tcp   recursing_raman
+f0c78c5e172b   preethiyadav/hello-world-nodejs:0.0.2.Release                                   "docker-entrypoint.s…"   2 hours ago     Up 2 hours          5000/tcp, 0.0.0.0:5070->5002/tcp, :::5070->5002/tcp   brave_ride
+1f0eaa529df8   preethiyadav/hello-world-java:0.0.2.Release                                     "sh -c 'java -jar /h…"   2 hours ago     Up 2 hours          5000/tcp, 0.0.0.0:5060->5001/tcp, :::5060->5001/tcp   gallant_chandrasekhar
+2f945888789e   preethiyadav/hello-world-python:0.0.2.Release                                   "/bin/sh -c 'python …"   2 hours ago     Up 2 hours          0.0.0.0:5050->5000/tcp, :::5050->5000/tcp             stupefied_faraday
+
+54.234.254.134 | 172.31.23.52 | t2.micro | null
+[ root@ip-172-31-23-52 ~ ]# docker container run -p -d -m 512m --cpu-quota=60000 in 5030:5005 683207969965.dkr.ecr.us-east-1.amazonaws.com/preethiyadav/hello-world-java:0.0.1.Release
+docker: Invalid containerPort: -d.
+See 'docker run --help'.
+
+54.234.254.134 | 172.31.23.52 | t2.micro | null
+[ root@ip-172-31-23-52 ~ ]# docker container run -m 512m --cpu-quota=60000 -p 5030:5005 -d  683207969965.dkr.ecr.us-east-1.amazonaws.com/preethiyadav/hello-world-java:0.0.1.Release
+887f08e4bb9fc99dc240a3204563dff48634262db317959b1aec540951096cba
+
+54.234.254.134 | 172.31.23.52 | t2.micro | null
+[ root@ip-172-31-23-52 ~ ]# df -h
+Filesystem      Size  Used Avail Use% Mounted on
+devtmpfs        470M     0  470M   0% /dev
+tmpfs           495M     0  495M   0% /dev/shm
+tmpfs           495M   14M  482M   3% /run
+tmpfs           495M     0  495M   0% /sys/fs/cgroup
+/dev/xvda1      8.0G  4.0G  4.1G  50% /
+tmpfs            99M     0   99M   0% /run/user/1000
+overlay         8.0G  4.0G  4.1G  50% /var/lib/docker/overlay2/aa10d0a5c0f21b6139734f8e4c9fd767b2f7c82d449a4b159d4e22b33d7a7f18/merged
+overlay         8.0G  4.0G  4.1G  50% /var/lib/docker/overlay2/f1246594c7cdec94a384e17e7120ed759ea476c2e225c39b84de38bd22c7ed36/merged
+overlay         8.0G  4.0G  4.1G  50% /var/lib/docker/overlay2/80a5f6da6ba6ea4946b1c3c3d16abb1f7253a9715d3575bc850cb13644dcc351/merged
+overlay         8.0G  4.0G  4.1G  50% /var/lib/docker/overlay2/77c9f414ddeedc2793cebb7137e54e39e09bb701e74e3e4490c0a64e5738f970/merged
+overlay         8.0G  4.0G  4.1G  50% /var/lib/docker/overlay2/2c7dca3cd083c3bf8a30d9cd226c7497900ffcfa775d98f73b91bab5c9188245/merged
+
+54.234.254.134 | 172.31.23.52 | t2.micro | null
+[ root@ip-172-31-23-52 ~ ]# # docker container run -m 512m --cpu-quota=60000 -p 5030:5005 -d  683207969965.dkr.ecr.us-east-1.amazonaws.com/preethiyadav/hello-world-java:0.0.1.Release
+tmpfs           495M     0  495M   0% /sys/fs/cgroup
+/dev/xvda1      8.0G  4.0G  4.1G  50% /
+tmpfs            99M     0   99M   0% /run/user/1000
+overlay         8.0G  4.0G  4.1G  50% /var/lib/docker/overlay2/aa10d0a5c0f21b6139734f8e4c9fd767b2f7c82d449a4b159d4e22b33d7a7f18/merged
+overlay         8.0G  4.0G  4.1G  50% /var/lib/docker/overlay2/f1246594c7cdec94a384e17e7120ed759ea476c2e225c39b84de38bd22c7ed36/merged
+overlay         8.0G  4.0G  4.1G  50% /var/lib/docker/overlay2/80a5f6da6ba6ea4946b1c3c3d16abb1f7253a9715d3575bc850cb13644dcc351/merged
+overlay         8.0G  4.0G  4.1G  50% /var/lib/docker/overlay2/77c9f414ddeedc2793cebb7137e54e39e09bb701e74e3e4490c0a64e5738f970/merged
+overlay         8.0G  4.0G  4.1G  50% /var/lib/docker/overlay2/2c7dca3cd083c3bf8a30d9cd226c7497900ffcfa775d98f73b91bab5c9188245/merged
+
+54.234.254.134 | 172.31.23.52 | t2.micro | null
+[ root@ip-172-31-23-52 ~ ]#
+
+54.234.254.134 | 172.31.23.52 | t2.micro | null
+[ root@ip-172-31-23-52 ~ ]# 887f08e4bb9fc99dc240a3204563dff48634262db317959b1aec540951096cba
+-bash: 887f08e4bb9fc99dc240a3204563dff48634262db317959b1aec540951096cba: command not found
+
+54.234.254.134 | 172.31.23.52 | t2.micro | null
+[ root@ip-172-31-23-52 ~ ]#
+
+54.234.254.134 | 172.31.23.52 | t2.micro | null
+[ root@ip-172-31-23-52 ~ ]# 54.234.254.134 | 172.31.23.52 | t2.micro | null
+-bash: 172.31.23.52: command not found
+-bash: t2.micro: command not found
+-bash: null: command not found
+-bash: 54.234.254.134: command not found
+
+54.234.254.134 | 172.31.23.52 | t2.micro | null
+[ root@ip-172-31-23-52 ~ ]# [ root@ip-172-31-23-52 ~ ]# df -h
+-bash: [: missing `]'
+
+54.234.254.134 | 172.31.23.52 | t2.micro | null
+[ root@ip-172-31-23-52 ~ ]# Filesystem      Size  Used Avail Use% Mounted on
+-bash: Filesystem: command not found
+
+54.234.254.134 | 172.31.23.52 | t2.micro | null
+[ root@ip-172-31-23-52 ~ ]# devtmpfs        470M     0  470M   0% /dev
+-bash: devtmpfs: command not found
+
+54.234.254.134 | 172.31.23.52 | t2.micro | null
+[ root@ip-172-31-23-52 ~ ]# tmpfs           495M     0  495M   0% /dev/shm
+-bash: tmpfs: command not found
+
+54.234.254.134 | 172.31.23.52 | t2.micro | null
+[ root@ip-172-31-23-52 ~ ]# tmpfs           495M   14M  482M   3% /run
+-bash: tmpfs: command not found
+
+54.234.254.134 | 172.31.23.52 | t2.micro | null
+[ root@ip-172-31-23-52 ~ ]# tmpfs           495M     0  495M   0% /sys/fs/cgroup
+-bash: tmpfs: command not found
+
+54.234.254.134 | 172.31.23.52 | t2.micro | null
+[ root@ip-172-31-23-52 ~ ]# /dev/xvda1      8.0G  4.0G  4.1G  50% /
+-bash: /dev/xvda1: Permission denied
+
+54.234.254.134 | 172.31.23.52 | t2.micro | null
+[ root@ip-172-31-23-52 ~ ]# tmpfs            99M     0   99M   0% /run/user/1000
+-bash: tmpfs: command not found
+
+54.234.254.134 | 172.31.23.52 | t2.micro | null
+[ root@ip-172-31-23-52 ~ ]# overlay         8.0G  4.0G  4.1G  50% /var/lib/docker/overlay2/aa10d0a5c0f21b6139734f8e4c9fd767b2f7c82d449a4b159d4e22b33d7a7f18/merged
+-bash: overlay: command not found
+
+54.234.254.134 | 172.31.23.52 | t2.micro | null
+[ root@ip-172-31-23-52 ~ ]# overlay         8.0G  4.0G  4.1G  50% /var/lib/docker/overlay2/f1246594c7cdec94a384e17e7120ed759ea476c2e225c39b84de38bd22c7ed36/merged
+-bash: overlay: command not found
+
+54.234.254.134 | 172.31.23.52 | t2.micro | null
+[ root@ip-172-31-23-52 ~ ]# overlay         8.0G  4.0G  4.1G  50% /var/lib/docker/overlay2/80a5f6da6ba6ea4946b1c3c3d16abb1f7253a9715d3575bc850cb13644dcc351/merged
+-bash: overlay: command not found
+
+54.234.254.134 | 172.31.23.52 | t2.micro | null
+[ root@ip-172-31-23-52 ~ ]# overlay         8.0G  4.0G  4.1G  50% /var/lib/docker/overlay2/77c9f414ddeedc2793cebb7137e54e39e09bb701e74e3e4490c0a64e5738f970/merged
+-bash: overlay: command not found
+
+54.234.254.134 | 172.31.23.52 | t2.micro | null
+[ root@ip-172-31-23-52 ~ ]# overlay         8.0G  4.0G  4.1G  50% /var/lib/docker/overlay2/2c7dca3cd083c3bf8a30d9cd226c7497900ffcfa775d98f73b91bab5c9188245/merged
+-bash: overlay: command not found
+
+54.234.254.134 | 172.31.23.52 | t2.micro | null
+[ root@ip-172-31-23-52 ~ ]#
+
+54.234.254.134 | 172.31.23.52 | t2.micro | null
+[ root@ip-172-31-23-52 ~ ]# 54.234.254.134 | 172.31.23.52 | t2.micro | null
+-bash: null: command not found
+-bash: 172.31.23.52: command not found
+-bash: t2.micro: command not found
+-bash: 54.234.254.134: command not found
+
+54.234.254.134 | 172.31.23.52 | t2.micro | null
+[ root@ip-172-31-23-52 ~ ]# [ root@ip-172-31-23-52 ~ ]#
+-bash: [: missing `]'
+
+54.234.254.134 | 172.31.23.52 | t2.micro | null
+[ root@ip-172-31-23-52 ~ ]# # docker container run -m 512m --cpu-quota=60000 -p 5030:5005 -d  683207969965.dkr.ecr.us-east-1.amazonaws.com/preethiyadav/hello-world-java:0.0.1.Release
+
+54.234.254.134 | 172.31.23.52 | t2.micro | null
+[ root@ip-172-31-23-52 ~ ]# 887f08e4bb9fc99dc240a3204563dff48634262db317959b1aec540951096cba
+-bash: 887f08e4bb9fc99dc240a3204563dff48634262db317959b1aec540951096cba: command not found
+
+54.234.254.134 | 172.31.23.52 | t2.micro | null
+[ root@ip-172-31-23-52 ~ ]#
+
+54.234.254.134 | 172.31.23.52 | t2.micro | null
+[ root@ip-172-31-23-52 ~ ]# 54.234.254.134 | 172.31.23.52 | t2.micro | null
+-bash: 172.31.23.52: command not found
+-bash: t2.micro: command not found
+-bash: null: command not found
+-bash: 54.234.254.134: command not found
+
+54.234.254.134 | 172.31.23.52 | t2.micro | null
+[ root@ip-172-31-23-52 ~ ]# [ root@ip-172-31-23-52 ~ ]# df -h
+-bash: [: missing `]'
+
+54.234.254.134 | 172.31.23.52 | t2.micro | null
+[ root@ip-172-31-23-52 ~ ]# Filesystem      Size  Used Avail Use% Mounted on
+-bash: Filesystem: command not found
+
+54.234.254.134 | 172.31.23.52 | t2.micro | null
+[ root@ip-172-31-23-52 ~ ]# devtmpfs        470M     0  470M   0% /dev
+-bash: devtmpfs: command not found
+
+54.234.254.134 | 172.31.23.52 | t2.micro | null
+[ root@ip-172-31-23-52 ~ ]# tmpfs           495M     0  495M   0% /dev/shm
+-bash: tmpfs: command not found
+
+54.234.254.134 | 172.31.23.52 | t2.micro | null
+[ root@ip-172-31-23-52 ~ ]# tmpfs           495M   14M  482M   3% /run
+-bash: tmpfs: command not found
+
+54.234.254.134 | 172.31.23.52 | t2.micro | null
+[ root@ip-172-31-23-52 ~ ]# tmpfs           495M     0  495M   0% /sys/fs/cgroup
+-bash: tmpfs: command not found
+
+54.234.254.134 | 172.31.23.52 | t2.micro | null
+[ root@ip-172-31-23-52 ~ ]# /dev/xvda1      8.0G  4.0G  4.1G  50% /
+-bash: /dev/xvda1: Permission denied
+
+54.234.254.134 | 172.31.23.52 | t2.micro | null
+[ root@ip-172-31-23-52 ~ ]# tmpfs            99M     0   99M   0% /run/user/1000
+-bash: tmpfs: command not found
+
+54.234.254.134 | 172.31.23.52 | t2.micro | null
+[ root@ip-172-31-23-52 ~ ]# overlay         8.0G  4.0G  4.1G  50% /var/lib/docker/overlay2/aa10d0a5c0f21b6139734f8e4c9fd767b2f7c82d449a4b159d4e22b33d7a7f18/merged
+-bash: overlay: command not found
+
+54.234.254.134 | 172.31.23.52 | t2.micro | null
+[ root@ip-172-31-23-52 ~ ]# overlay         8.0G  4.0G  4.1G  50% /var/lib/docker/overlay2/f1246594c7cdec94a384e17e7120ed759ea476c2e225c39b84de38bd22c7ed36/merged
+-bash: overlay: command not found
+
+54.234.254.134 | 172.31.23.52 | t2.micro | null
+[ root@ip-172-31-23-52 ~ ]# overlay         8.0G  4.0G  4.1G  50% /var/lib/docker/overlay2/80a5f6da6ba6ea4946b1c3c3d16abb1f7253a9715d3575bc850cb13644dcc351/merged
+-bash: overlay: command not found
+
+54.234.254.134 | 172.31.23.52 | t2.micro | null
+[ root@ip-172-31-23-52 ~ ]# overlay         8.0G  4.0G  4.1G  50% /var/lib/docker/overlay2/77c9f414ddeedc2793cebb7137e54e39e09bb701e74e3e4490c0a64e5738f970/merged
+-bash: overlay: command not found
+
+54.234.254.134 | 172.31.23.52 | t2.micro | null
+[ root@ip-172-31-23-52 ~ ]# overlay         8.0G  4.0G  4.1G  50% /var/lib/docker/overlay2/2c7dca3cd083c3bf8a30d9cd226c7497900ffcfa775d98f73b91bab5c9188245/merged
+-bash: overlay: command not found
+
+54.234.254.134 | 172.31.23.52 | t2.micro | null
+[ root@ip-172-31-23-52 ~ ]#
+
+54.234.254.134 | 172.31.23.52 | t2.micro | null
+[ root@ip-172-31-23-52 ~ ]# 54.234.254.134 | 172.31.23.52 | t2.micro | null
+-bash: 172.31.23.52: command not found
+-bash: t2.micro: command not found
+-bash: null: command not found
+-bash: 54.234.254.134: command not found
+
+54.234.254.134 | 172.31.23.52 | t2.micro | null
+[ root@ip-172-31-23-52 ~ ]# [ root@ip-172-31-23-52 ~ ]#
+-bash: [: missing `]'
+
+54.234.254.134 | 172.31.23.52 | t2.micro | null
+[ root@ip-172-31-23-52 ~ ]# [ root@ip-172-31-23-52 ~ ]## docker container run -m 512m --cpu-quota=60000 -p 5030:5005 -d  683207969965.dkr.ecr.us-east-1.amazonaws.com/preethiyadav/hello-world-java:0.0.1.Release
+-bash: [: missing `]'
+/dev/xvda1      8.0G  4.0G  4.1G  50% /
+tmpfs            99M     0   99M   0% /run/user/1000
+overlay         8.0G  4.0G  4.1G  50% /var/lib/docker/overlay2/aa10d0a5c0f21b6139734f8e4c9fd767b2f7c82d449a4b159d4e22b33d7a7f18/merged
+overlay         8.0G  4.0G  4.1G  50% /var/lib/docker/overlay2/f1246594c7cdec94a384e17e7120ed759ea476c2e225c39b84de38bd22c7ed36/merged
+overlay         8.0G  4.0G  4.1G  50% /var/lib/docker/overlay2/80a5f6da6ba6ea4946b1c3c3d16abb1f7253a9715d3575bc850cb13644dcc351/merged
+overlay         8.0G  4.0G  4.1G  50% /var/lib/docker/overlay2/77c9f414ddeedc2793cebb7137e54e39e09bb701e74e3e4490c0a64e5738f970/merged
+overlay         8.0G  4.0G  4.1G  50% /var/lib/docker/overlay2/2c7dca3cd083c3bf8a30d9cd226c7497900ffcfa775d98f73b91bab5c9188245/merged
+
+54.234.254.134 | 172.31.23.52 | t2.micro | null
+[ root@ip-172-31-23-52 ~ ]#
+
+54.234.254.134 | 172.31.23.52 | t2.micro | null
+[ root@ip-172-31-23-52 ~ ]# 887f08e4bb9fc99dc240a3204563dff48634262db317959b1aec540951096cba
+-bash: 887f08e4bb9fc99dc240a3204563dff48634262db317959b1aec540951096cba: command not found
+
+54.234.254.134 | 172.31.23.52 | t2.micro | null
+[ root@ip-172-31-23-52 ~ ]#
+
+54.234.254.134 | 172.31.23.52 | t2.micro | null
+[ root@ip-172-31-23-52 ~ ]# 54.234.254.134 | 172.31.23.52 | t2.micro | null
+-bash: 172.31.23.52: command not found
+-bash: t2.micro: command not found
+-bash: null: command not found
+-bash: 54.234.254.134: command not found
+
+54.234.254.134 | 172.31.23.52 | t2.micro | null
+[ root@ip-172-31-23-52 ~ ]# [ root@ip-172-31-23-52 ~ ]# df -h
+-bash: [: missing `]'
+
+54.234.254.134 | 172.31.23.52 | t2.micro | null
+[ root@ip-172-31-23-52 ~ ]# Filesystem      Size  Used Avail Use% Mounted on
+-bash: Filesystem: command not found
+
+54.234.254.134 | 172.31.23.52 | t2.micro | null
+[ root@ip-172-31-23-52 ~ ]# devtmpfs        470M     0  470M   0% /dev
+-bash: devtmpfs: command not found
+
+54.234.254.134 | 172.31.23.52 | t2.micro | null
+[ root@ip-172-31-23-52 ~ ]# tmpfs           495M     0  495M   0% /dev/shm
+-bash: tmpfs: command not found
+
+54.234.254.134 | 172.31.23.52 | t2.micro | null
+[ root@ip-172-31-23-52 ~ ]# tmpfs           495M   14M  482M   3% /run
+-bash: tmpfs: command not found
+
+54.234.254.134 | 172.31.23.52 | t2.micro | null
+[ root@ip-172-31-23-52 ~ ]# tmpfs           495M     0  495M   0% /sys/fs/cgroup
+-bash: tmpfs: command not found
+
+54.234.254.134 | 172.31.23.52 | t2.micro | null
+[ root@ip-172-31-23-52 ~ ]# /dev/xvda1      8.0G  4.0G  4.1G  50% /
+-bash: /dev/xvda1: Permission denied
+
+54.234.254.134 | 172.31.23.52 | t2.micro | null
+[ root@ip-172-31-23-52 ~ ]# tmpfs            99M     0   99M   0% /run/user/1000
+-bash: tmpfs: command not found
+
+54.234.254.134 | 172.31.23.52 | t2.micro | null
+[ root@ip-172-31-23-52 ~ ]# overlay         8.0G  4.0G  4.1G  50% /var/lib/docker/overlay2/aa10d0a5c0f21b6139734f8e4c9fd767b2f7c82d449a4b159d4e22b33d7a7f18/merged
+-bash: overlay: command not found
+
+54.234.254.134 | 172.31.23.52 | t2.micro | null
+[ root@ip-172-31-23-52 ~ ]# overlay         8.0G  4.0G  4.1G  50% /var/lib/docker/overlay2/f1246594c7cdec94a384e17e7120ed759ea476c2e225c39b84de38bd22c7ed36/merged
+-bash: overlay: command not found
+
+54.234.254.134 | 172.31.23.52 | t2.micro | null
+[ root@ip-172-31-23-52 ~ ]# overlay         8.0G  4.0G  4.1G  50% /var/lib/docker/overlay2/80a5f6da6ba6ea4946b1c3c3d16abb1f7253a9715d3575bc850cb13644dcc351/merged
+-bash: overlay: command not found
+
+54.234.254.134 | 172.31.23.52 | t2.micro | null
+[ root@ip-172-31-23-52 ~ ]# overlay         8.0G  4.0G  4.1G  50% /var/lib/docker/overlay2/77c9f414ddeedc2793cebb7137e54e39e09bb701e74e3e4490c0a64e5738f970/merged
+-bash: overlay: command not found
+
+54.234.254.134 | 172.31.23.52 | t2.micro | null
+[ root@ip-172-31-23-52 ~ ]# overlay         8.0G  4.0G  4.1G  50% /var/lib/docker/overlay2/2c7dca3cd083c3bf8a30d9cd226c7497900ffcfa775d98f73b91bab5c9188245/merged
+-bash: overlay: command not found
+
+54.234.254.134 | 172.31.23.52 | t2.micro | null
+[ root@ip-172-31-23-52 ~ ]#
+
+54.234.254.134 | 172.31.23.52 | t2.micro | null
+[ root@ip-172-31-23-52 ~ ]# 54.234.254.134 | 172.31.23.52 | t2.micro | null
+-bash: 172.31.23.52: command not found
+-bash: t2.micro: command not found
+-bash: null: command not found
+-bash: 54.234.254.134: command not found
+
