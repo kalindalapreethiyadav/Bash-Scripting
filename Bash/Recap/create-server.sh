@@ -15,16 +15,17 @@ SGID="$(aws ec2 describe-security-groups   --filters Name=group-name,Values=Allo
 echo "AMI ID Used to launch instance is : $AMI_ID"
 echo "SG ID Used to launch instance is : $SGID"
 echo $COMPONENT
+file_jname="file:///tmp/dns.json"
 
 createServer() {
     PRIVATE_IP=$(aws ec2 run-instances --image-id $AMI_ID --instance-type t3.micro --security-group-ids $SGID  --instance-market-options "MarketType=spot, SpotOptions={SpotInstanceType=persistent,InstanceInterruptionBehavior=stop}"  --tag-specifications "ResourceType=instance,Tags=[{Key=Name,Value=${COMPONENT}-${ENV}}]"| jq '.Instances[].PrivateIpAddress' | sed -e 's/"//g')
 
 # Changing the IP Address and DNS Name as per the component
 sed -e "s/IPADDRESS/${PRIVATE_IP}/" -e "s/COMPONENT/${COMPONENT}-${ENV}/" route53.json > record.json
-aws route53 change-resource-record-sets --hosted-zone-id Z10449332B7O19X92W88T --change-batch=file:///tmp/dns.json | jq
+aws route53 change-resource-record-sets --hosted-zone-id Z10449332B7O19X92W88T --change-batch=$file_jname | jq
 
     echo -n "Creating the DNS Record ********"
-    aws route53 change-resource-record-sets --hosted-zone-id $ZONE_ID --change-batch=file:///tmp/dns.json | jq 
+    aws route53 change-resource-record-sets --hosted-zone-id $ZONE_ID --change-batch=$file_jname | jq 
 }
 
 
