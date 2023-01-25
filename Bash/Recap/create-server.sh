@@ -1,37 +1,35 @@
+#!/bin/bash 
 
-#!/bin/bash/
-#This script to create a server and assign records to the route53 host zone
-
-if [ "$1" = "" ] | [ "$2" = "" ] ; then 
-    echo -e "\e[31m \n Valid options are component -name or all and env \e[0m \n \e[33m Ex: \n\t bash create-server.sh payment dev \n \e[0m "
-    exit 1
+if [ -z "$1" ]; then 
+    echo -e "\e[31m Component name is required \n example usage is: \n\t bash create-server.sh componentName \e[0m"   
+    exit 1 
 fi 
 
 COMPONENT=$1
 ENV=$2
-SGID="sg-052b6aa44446ef0b4"
-#Script Aim is to create a vm instance and records creation and update to host zone 
-#lets find out the AMI id of the AMI 
+ZONE_ID="Z10449332B7O19X92W88T"
 
-AMI_ID=$(aws ec2 describe-images  --filters "Name=name,Values=DevOps-LabImage-CentOS7" | jq '.Images[].ImageId' | sed -e 's/"//g')
-echo $AMI_ID 
+# AMI_ID="$(aws ec2 describe-images --region us-east-1 --filters "Name=name,Values=DevOps-LabImage-CentOS7" | jq '.Images[].ImageId' | sed -e 's/"//g')"
+AMI_ID="ami-0fa1ba08307b907ac"
+SGID="$(aws ec2 describe-security-groups   --filters Name=group-name,Values=Allow_SSH | jq '.SecurityGroups[].GroupId' | sed -e 's/"//g')"
+echo "AMI ID Used to launch instance is : $AMI_ID"
+echo "SG ID Used to launch instance is : $SGID"
+echo $COMPONENT
 
-create_server() 
-{
-echo -e "$COMPONENT Server Creation in progress"
-PRIVATE_IP=$(aws ec2 run-instances --security-group-ids $SGID --image-id $AMI_ID --instance-type t2.micro --tag-specifications "ResourceType=instance,Tags=[{Key=Name,Value=${COMPONENT}-${ENV}}]" | jq '.Instances[].PrivateIpAddress' | sed -e 's/"//g')
+createServer() {
+    PRIVATE_IP=$(aws ec2 run-instances --image-id $AMI_ID --instance-type t3.micro --security-group-ids $SGID  --instance-market-options "MarketType=spot, SpotOptions={SpotInstanceType=persistent,InstanceInterruptionBehavior=stop}"  --tag-specifications "ResourceType=instance,Tags=[{Key=Name,Value=${COMPONENT}-${ENV}}]"| jq '.Instances[].PrivateIpAddress' | sed -e 's/"//g')
 
-# Changing the IP Address and DNS Name as per the component
-sed -e "s/IPADDRESS/${PRIVATE_IP}/" -e "s/COMPONENT/${COMPONENT}-${ENV}/" route53.json > record.json
-aws route53 change-resource-record-sets --hosted-zone-id Z10449332B7O19X92W88T --change-batch file://record.json | jq 
+    sed -e "s/IPADDRESS/${PRIVATE_IP}/" -e "s/COMPONENT/$COMPONENT-${ENV}/" route53.json > /tmp/dns.json 
 
+    echo -n "Creating the DNS Record ********"
+    aws route53 change-resource-record-sets --hosted-zone-id $ZONE_ID --change-batch file:///tmp/dns.json | jq 
 }
 
-if [ "$1" == "all" ] ; then 
-    for component in catalogue cart user shipping payment frontend mongodb mysql rabbitmq redis ; do 
-        COMPONENT=$COMPONENT
-        create_server 
+if [ "$1" == "all" ]; then 
+    for component in frontend catalogue cart user shipping payment mongodb mysql rabbitmq redis; do 
+        COMPONENT=$component
+        createServer
     done 
 else 
-    create_server 
-fi
+        createServer 
+fi 
