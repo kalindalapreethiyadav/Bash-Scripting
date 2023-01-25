@@ -19,11 +19,15 @@ echo $COMPONENT
 createServer() {
     PRIVATE_IP=$(aws ec2 run-instances --image-id $AMI_ID --instance-type t3.micro --security-group-ids $SGID  --instance-market-options "MarketType=spot, SpotOptions={SpotInstanceType=persistent,InstanceInterruptionBehavior=stop}"  --tag-specifications "ResourceType=instance,Tags=[{Key=Name,Value=${COMPONENT}-${ENV}}]"| jq '.Instances[].PrivateIpAddress' | sed -e 's/"//g')
 
-    sed -e "s/IPADDRESS/${PRIVATE_IP}/" -e "s/COMPONENT/$COMPONENT-${ENV}/" route53.json > /tmp/dns.json 
+# Changing the IP Address and DNS Name as per the component
+sed -e "s/IPADDRESS/${PRIVATE_IP}/" -e "s/COMPONENT/${COMPONENT}-${ENV}/" route53.json > record.json
+aws route53 change-resource-record-sets --hosted-zone-id Z10449332B7O19X92W88T --change-batch file://record.json | jq 
 
     echo -n "Creating the DNS Record ********"
     aws route53 change-resource-record-sets --hosted-zone-id $ZONE_ID --change-batch=file:///tmp/dns.json | jq 
 }
+
+
 
 if [ "$1" == "all" ]; then 
     for component in frontend catalogue cart user shipping payment mongodb mysql rabbitmq redis; do 
@@ -31,5 +35,5 @@ if [ "$1" == "all" ]; then
         createServer
     done 
 else 
-        createServer 
-fi 
+    create_server 
+fi
