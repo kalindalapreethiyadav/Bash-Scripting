@@ -35,5 +35,5 @@ if [ "$1" == "all" ]; then
         createServer
     done 
 else 
-    create_server 
+    createServer
 fi
