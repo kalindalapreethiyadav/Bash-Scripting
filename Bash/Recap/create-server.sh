@@ -21,7 +21,7 @@ createServer() {
 
 # Changing the IP Address and DNS Name as per the component
 sed -e "s/IPADDRESS/${PRIVATE_IP}/" -e "s/COMPONENT/${COMPONENT}-${ENV}/" route53.json > record.json
-aws route53 change-resource-record-sets --hosted-zone-id Z10449332B7O19X92W88T --change-batch file://record.json | jq 
+aws route53 change-resource-record-sets --hosted-zone-id Z10449332B7O19X92W88T --change-batch=file:///tmp/dns.json | jq
 
     echo -n "Creating the DNS Record ********"
     aws route53 change-resource-record-sets --hosted-zone-id $ZONE_ID --change-batch=file:///tmp/dns.json | jq 
